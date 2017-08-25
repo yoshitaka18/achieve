@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   get 'top/index'
 
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
+
+  resources :poems, only: [:index, :show]
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
