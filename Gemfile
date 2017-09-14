@@ -63,6 +63,7 @@ gem 'omniauth-facebook'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'pusher'
+gem 'fog'
 
 group :development do
   gem 'letter_opener_web'
